@@ -122,4 +122,4 @@ Acessíveis via Agent tool quando o agente principal precisa de especialização
 
 ## Changelog
 
-- **2026-05-18** — Documento criado. Workflow R-P-I-V adaptado de exemplo de repo de produção (Zoetis) para o contexto greenfield educacional deste projeto.
+- **2026-05-18** — Documento criado. Workflow R-P-I-V instalado como prática-padrão do projeto desde o dia zero.
