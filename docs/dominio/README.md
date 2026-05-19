@@ -13,6 +13,7 @@ Esta pasta é a **fonte canônica** do conhecimento pedagógico do projeto. Tudo
 | [`formulas/`](./formulas/)     | Matemática real do projeto (fórmulas de TRI simplificado, planilhas, exemplos).     |
 | [`_templates/`](./_templates/) | Esqueletos para o professor preencher conceitos/processos novos sem precisar criar markdown do zero. |
 | [`GLOSSARIO.md`](./GLOSSARIO.md) | Vocabulário PT-BR com definições completas e exemplos de uso.                     |
+| [`REFERENCIAS.md`](./REFERENCIAS.md) | Fontes oficiais e confiáveis para aprofundamento (SAEPE, INEP, BNCC, etc.).   |
 
 ## Para o professor: como contribuir
 
@@ -46,7 +47,11 @@ Abra [`GLOSSARIO.md`](./GLOSSARIO.md) e adicione na ordem alfabética. Cada term
 
 - **Definição** — uma frase clara.
 - **Exemplo de uso** — uma frase em contexto.
-- **Referência** (opcional) — de onde a definição vem (BNCC, INEP, Vygotsky, etc.).
+- **Referência** (opcional) — de onde a definição vem (BNCC, INEP, Vygotsky, etc.). Veja [`REFERENCIAS.md`](./REFERENCIAS.md) para a lista completa de fontes oficiais com URLs.
+
+## Onde tirar dúvidas
+
+Para fundamentação externa (SAEPE oficial, matriz de descritores SAEB, BNCC, nota técnica TRI do INEP, etc.) veja [`REFERENCIAS.md`](./REFERENCIAS.md). Apenas fontes oficiais ou periódicos acadêmicos com revisão por pares.
 
 ## Para o dev: como consumir
 

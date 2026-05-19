@@ -32,6 +32,7 @@ Para entender quando cada um se aciona, ver [`dev/AI-WORKFLOW.md`](./dev/AI-WORK
 | Professor contribuindo conteúdo  | [`dominio/README.md`](./dominio/README.md)             |
 | Agente LLM em /research          | [`llm/MAP.md`](./llm/MAP.md) (já carregado pelo agente) |
 | Procurando vocabulário PT-BR     | [`dominio/GLOSSARIO.md`](./dominio/GLOSSARIO.md)       |
+| Procurando fonte oficial externa | [`dominio/REFERENCIAS.md`](./dominio/REFERENCIAS.md)   |
 
 ## Princípios
 
