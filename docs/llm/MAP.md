@@ -27,7 +27,8 @@
 | Se o tópico do usuário contém…                         | Carregue                          |
 |--------------------------------------------------------|-----------------------------------|
 | "avaliação", "diagnóstica", "simulado", "ciclo"        | `slices/dominio-avaliacao-ciclo.md` |
-| "descritor", "matriz SAEB", "BNCC", "habilidade"       | `slices/dominio-descritores.md`     |
+| "descritor", "matriz SAEB", "tópico", "D1", "D5"        | `slices/dominio-descritores.md`     |
+| "BNCC", "habilidade", "EF09LP", "EF89LP", "currículo"   | `slices/dominio-habilidades-bncc.md` |
 | "TCT", "teoria clássica", "fácil/médio/difícil"        | `slices/dominio-tct.md`             |
 | "TRI", "penalização", "chute", "ponderação", "SAEPE"   | `slices/dominio-tri-simplificado.md` |
 | "análise", "agrupamento", "nível", "intervenção"       | `slices/dominio-analise-pedagogica.md` |
