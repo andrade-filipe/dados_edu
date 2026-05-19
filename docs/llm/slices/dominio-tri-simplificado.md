@@ -1,19 +1,20 @@
 ---
 id: dominio-tri-simplificado
 title: TRI Simplificada do Projeto
-when-to-load: ["TRI", "penalização", "chute", "ponderação", "nota ponderada", "SAEPE", "fórmula"]
+when-to-load: ["TRI", "penalização", "chute", "ponderação", "nota ponderada", "SAEPE", "fórmula", "3 parâmetros", "discriminação", "dificuldade", "acerto ao acaso"]
 owners-paths: ["docs/dominio/conceitos/teoria-resposta-item-tri.md", "docs/dominio/formulas/tri-simplificado.md", "docs/dominio/conceitos/escala-saepe.md"]
 last-verified: 2026-05-18
-version: 1
+version: 2
 ---
 
 ## Resumo
 
 - Versão simplificada da TRI, não a oficial do ENEM.
-- Combina TCT + penalização de chute + ponderação por dificuldade.
+- TRI oficial usa modelo logístico de 3 parâmetros (a/b/c) estimados por calibração estatística.
+- Nossa versão simplificada combina TCT + penalização de chute + ponderação por dificuldade.
 - Saída final convertida para escala SAEPE (0-500).
 
-## Pipeline
+## Pipeline da simplificada
 
 ```
 Acertos brutos por dificuldade (F/M/D)
@@ -27,20 +28,28 @@ AX (nota real ponderada)
 AZ (0-500)
 ```
 
+## Modelo oficial vs simplificado (resumo)
+
+| Parâmetro | Oficial (INEP) | Nosso |
+|---|---|---|
+| a (discriminação) | calibração | não estimado |
+| b (dificuldade) | calibração | aproximado via TCT (% erro) |
+| c (acerto ao acaso) | calibração | heurística 1/3 |
+
 ## Fatos-chave
 
-- Pesos: fácil = 1, médio = 1,5, difícil = 2.
-- Penalização assume probabilidade média de chute ~1/3 (4 alternativas).
-- Hardcoded `13` (total de fáceis na prova de referência) → vira parâmetro quando virar sistema.
+- Pesos da simplificada: fácil = 1, médio = 1,5, difícil = 2.
+- Hardcoded `13` (total fáceis na prova de referência) → vira parâmetro quando virar sistema.
+- Comparabilidade entre provas só com a TRI oficial (calibrada).
 
 ## Cuidados
 
 - ⚠️ Stability-critical: mudar fórmula altera análise de centenas de alunos.
-- Pesos foram calibrados empiricamente — não trocar sem revisão pedagógica.
 - Saída SAEPE é aproximação; comunicar isso em relatórios.
 
 ## Para aprofundar
 
-- [`docs/dominio/formulas/tri-simplificado.md`](../../dominio/formulas/tri-simplificado.md) — fórmulas completas com mapeamento de colunas.
-- [`docs/dominio/conceitos/teoria-resposta-item-tri.md`](../../dominio/conceitos/teoria-resposta-item-tri.md) — teoria.
+- [`docs/dominio/formulas/tri-simplificado.md`](../../dominio/formulas/tri-simplificado.md) — fórmulas completas.
+- [`docs/dominio/conceitos/teoria-resposta-item-tri.md`](../../dominio/conceitos/teoria-resposta-item-tri.md) — teoria + tabela oficial vs simplificado.
 - [`docs/dominio/conceitos/escala-saepe.md`](../../dominio/conceitos/escala-saepe.md) — saída final.
+- [`docs/dominio/REFERENCIAS.md`](../../dominio/REFERENCIAS.md#nota-técnica-sobre-tri-no-enem-inep-2011) — Nota Técnica TRI ENEM (INEP).
