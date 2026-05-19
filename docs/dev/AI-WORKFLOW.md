@@ -35,6 +35,20 @@ Slices atuais (espelham `docs/dominio/`):
 
 Os 4 subagentes (`research`, `plan`, `implement`, `verify-and-document`) e os 4 slash commands correspondentes. Adaptados para o contexto educacional deste repo.
 
+### 5. `.claude/skills/` (project-level)
+
+Workflows codificados que o agente invoca automaticamente quando o contexto bate. Diferente de slash commands (você aciona), skills são procedimentos que o agente segue quando reconhece a situação. Skills atuais:
+
+| Skill | Para quem | Quando aciona |
+|---|---|---|
+| `documentar-conceito` | Professor | Quer registrar conceito novo em `docs/dominio/conceitos/` |
+| `documentar-processo` | Professor | Quer registrar processo de trabalho |
+| `atualizar-glossario` | Ambos | Termo novo precisa entrar nos dois glossários atomicamente |
+| `revisar-marcadores-todo` | Professor | Quer percorrer e resolver `<!-- precisa de revisão do professor -->` |
+| `evoluir-tooling` | Dev | Detectar drift entre `.claude/` e a realidade do projeto |
+
+Para criar skills novas, brainstorm + plan formal — não criar ad-hoc.
+
 ## R-P-I-V em 5 minutos
 
 ### `/research <tópico>`
@@ -101,6 +115,17 @@ Lê o output, faz follow-ups conversacionais. Sem implementação.
 /plan Z                      # gerar plano executável
 /implement                   # executar (com pausas em pontos sensíveis)
 /verify-and-doc              # atualizar docs/llm/
+```
+
+### "Quero documentar conceito ou processo novo"
+
+```
+# professor diz: "vamos documentar o conceito de inferência leitora"
+# agente reconhece e invoca:
+documentar-conceito
+# segue perguntas guiadas em PT-BR
+# ao final, sugere atualizar-glossario se houver termo novo
+# e /verify-and-doc para criar slice LLM
 ```
 
 ## Subagentes úteis
