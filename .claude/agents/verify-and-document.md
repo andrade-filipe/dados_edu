@@ -62,6 +62,21 @@ done
 
 Don't fail or block on these. Report findings, let user decide.
 
+## Tooling drift check
+
+Após verificar slices e sanidade do diff, avaliar se as mudanças sugerem necessidade de atualizar `.claude/`:
+
+- Novo conceito ou processo em `docs/dominio/` sem trigger correspondente em `agents/research.md` ou `llm/MAP.md`?
+- Novo path sensível introduzido que deveria entrar na lista de stability-critical?
+- Renomeação ou movimento de arquivo que torna referências em `.claude/` obsoletas?
+- Padrão de pergunta/workflow repetido nas últimas conversas que poderia virar skill?
+
+Se qualquer dos itens acima for verdade, **incluir na seção "Recommendations" do output** uma linha:
+
+> 🔧 Tooling drift detectado: recomendo invocar a skill `evoluir-tooling` para revisar `.claude/`.
+
+Esta skill **não modifica** `.claude/` — só recomenda. A modificação real é responsabilidade da skill `evoluir-tooling` com confirmação humana.
+
 ## Output format
 
 ```markdown
