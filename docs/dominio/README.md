@@ -53,6 +53,17 @@ Abra [`GLOSSARIO.md`](./GLOSSARIO.md) e adicione na ordem alfabética. Cada term
 
 Para fundamentação externa (SAEPE oficial, matriz de descritores SAEB, BNCC, nota técnica TRI do INEP, etc.) veja [`REFERENCIAS.md`](./REFERENCIAS.md). Apenas fontes oficiais ou periódicos acadêmicos com revisão por pares.
 
+## Marcadores de revisão
+
+Dois marcadores HTML são usados para sinalizar conteúdo que precisa de atenção:
+
+| Marcador | Quando aparece | O que o professor faz |
+|---|---|---|
+| `<!-- precisa de revisão do professor: <pergunta opcional> -->` | Conteúdo ausente — alguém (dev ou IA) deixou um buraco que só o professor pode preencher (exemplo de turma, faixa específica, etc.). | Cria o conteúdo do zero. |
+| `<!-- EXTRAÍDO de fonte oficial em AAAA-MM-DD · Fonte: <URL> · Status: aguarda validação pedagógica. -->` | Conteúdo presente, transcrito por dev a partir de uma fonte oficial. | Confirma transcrição contra a fonte, ajusta nuance pedagógica, remove o marcador quando ok. |
+
+A distinção importa: o primeiro requer **criação**; o segundo requer **validação**. Tempo e energia diferentes.
+
 ## Para o dev: como consumir
 
 Tudo em `dominio/` é texto narrativo, otimizado para humanos. Quando o agente LLM precisa do mesmo conteúdo de forma compacta, ele lê os equivalentes em [`docs/llm/slices/`](../llm/slices/). Não duplique manualmente — rode `/verify-and-doc` para sincronizar.
