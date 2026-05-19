@@ -14,6 +14,16 @@ Este arquivo é o mapa-mor da documentação. Cada pasta abaixo tem uma responsa
 | [`superpowers/specs/`](./superpowers/specs/)   | Time inteiro | Saídas de brainstorming — designs aprovados antes de virar plano executável.                |
 | [`superpowers/plans/`](./superpowers/plans/)   | Time inteiro | Planos passo-a-passo gerados a partir de specs ou pedidos diretos. Consumidos por `/implement`. |
 
+### Tooling auxiliar
+
+Além de `docs/`, o projeto tem `.claude/` com agents, commands e skills que automatizam workflows recorrentes. Em particular:
+
+- `.claude/agents/` — subagentes (research, plan, implement, verify-and-document).
+- `.claude/commands/` — slash commands (`/research`, `/plan`, `/implement`, `/verify-and-doc`).
+- `.claude/skills/` — skills project-level: `documentar-conceito`, `documentar-processo`, `atualizar-glossario`, `revisar-marcadores-todo`, `evoluir-tooling`.
+
+Para entender quando cada um se aciona, ver [`dev/AI-WORKFLOW.md`](./dev/AI-WORKFLOW.md).
+
 ## Por onde começar
 
 | Você é…                          | Comece em                                              |
