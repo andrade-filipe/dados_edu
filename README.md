@@ -10,7 +10,7 @@ Buscamos transformar a análise pedagógica que hoje é feita manualmente em pla
 - identificação de descritores críticos;
 - relatório pedagógico individual e por turma.
 
-O contexto original do projeto está no arquivo [`post_alikaeli`](./post_alikaeli) (texto do professor explicando como o trabalho é feito hoje).
+O conhecimento de origem (texto inicial do prof. Alikaeli descrevendo seu trabalho) foi extraído e estruturado em [`docs/dominio/`](./docs/dominio/). Comece por [`docs/dominio/README.md`](./docs/dominio/README.md) para entender o contexto pedagógico.
 
 ## Status
 

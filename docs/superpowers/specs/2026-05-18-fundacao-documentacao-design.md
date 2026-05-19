@@ -1,6 +1,8 @@
 # Fundação de Documentação — Design
 
 > Spec gerado por brainstorming · 2026-05-18 · Autor: Filipe Andrade (com Claude)
+>
+> **Nota histórica:** este spec menciona um arquivo `post_alikaeli` que existia na raiz do repositório quando ele foi escrito. Esse arquivo era o texto bruto do prof. Alikaeli descrevendo seu trabalho — serviu para semear `docs/dominio/` e foi removido após a extração por estar fora do padrão do repo. Todo o conteúdo essencial foi preservado em `docs/dominio/conceitos/`, `docs/dominio/processos/` e `docs/dominio/formulas/`.
 
 ## Contexto
 

@@ -98,5 +98,5 @@ Versão simplificada da TRI, calibrada empiricamente, que captura as duas intui�
 
 ## Referências
 
-- Post original do prof. Alikaeli (arquivo `post_alikaeli` na raiz do repo).
+- Texto original do prof. Alikaeli descrevendo a fórmula (extraído para este repositório; arquivo-fonte não preservado por ser informal).
 - [TCT](../conceitos/teoria-classica-testes-tct.md), [TRI simplificada](../conceitos/teoria-resposta-item-tri.md), [Escala SAEPE](../conceitos/escala-saepe.md).

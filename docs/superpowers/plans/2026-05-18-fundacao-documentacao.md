@@ -1,5 +1,7 @@
 # Fundação de Documentação Implementation Plan
 
+> **Nota histórica:** este plano menciona um arquivo `post_alikaeli` que existia na raiz do repositório durante a execução. Esse arquivo era o texto bruto do prof. Alikaeli descrevendo seu trabalho — serviu de fonte para popular `docs/dominio/` e foi removido após a extração por ser informal e fora do padrão. Todo conteúdo essencial vive hoje em `docs/dominio/`.
+>
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Estabelecer a fundação de documentação do `dados_edu` (greenfield, contexto educacional) cobrindo domínio pedagógico, slices LLM-first, esqueleto dev, adaptação completa do `.claude/` e novo README.

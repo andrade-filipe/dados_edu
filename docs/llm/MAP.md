@@ -8,7 +8,6 @@
 
 ```
 /
-├── post_alikaeli              # post original do professor (contexto humano)
 ├── README.md                  # vitrine + ponteiros
 ├── docs/
 │   ├── INDEX.md               # mapa das pastas

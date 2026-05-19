@@ -52,7 +52,7 @@ Run these and include results in the report:
 git log main..HEAD --pretty=format:"%s" | head -20
 
 # Any .md files dropped outside docs/ and .claude/?
-git diff main...HEAD --name-only --diff-filter=A | grep '\.md$' | grep -v -E "^(docs/|\.claude/|README\.md$|post_alikaeli)"
+git diff main...HEAD --name-only --diff-filter=A | grep '\.md$' | grep -v -E "^(docs/|\.claude/|README\.md$)"
 
 # All top-level docs have "Última atualização" header?
 for f in $(git diff main...HEAD --name-only --diff-filter=AM | grep -E '^docs/.*\.md$'); do

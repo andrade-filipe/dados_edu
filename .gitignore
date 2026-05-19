@@ -1,0 +1,40 @@
+# Claude Code configs locais (preferências por máquina, não devem ser compartilhadas)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs e diagnóstico
+*.log
+.npm/
+.eslintcache
+
+# Python (caso surja no futuro)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Node (caso surja no futuro)
+node_modules/
+dist/
+build/
+.cache/
+
+# Tooling
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
